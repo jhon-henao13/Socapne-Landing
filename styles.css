@@ -1477,6 +1477,15 @@ body {
     width: 48px;
   }
 
+  .floating-card.card-1 {
+    top: -27px;
+  }
+
+  .floating-card.card-2 {
+    bottom: -95px;
+    right: 140px;
+  }
+
 }
 
 @media (max-width: 860px) {
