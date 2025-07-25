@@ -1,5 +1,5 @@
 // =====================
-// Syslity - Scripts UI/UX Modernos (REESTRUCTURADO)
+// Socapne - Scripts UI/UX Modernos (REESTRUCTURADO)
 // =====================
 const body = document.body;
 
@@ -62,16 +62,32 @@ function initializeAnimations() {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+  // function openMobileMenu() {
+  //   mobileMenu.classList.add('active');
+  //   mobileOverlay.classList.add('active');
+  //   body.style.overflow = 'hidden';
+  // }
+  // function closeMobileMenu() {
+  //   mobileMenu.classList.remove('active');
+  //   mobileOverlay.classList.remove('active');
+  //   body.style.overflow = '';
+  // }
+
   function openMobileMenu() {
     mobileMenu.classList.add('active');
     mobileOverlay.classList.add('active');
+    mobileMenuBtn.classList.add('open');
     body.style.overflow = 'hidden';
   }
+
   function closeMobileMenu() {
     mobileMenu.classList.remove('active');
     mobileOverlay.classList.remove('active');
+    mobileMenuBtn.classList.remove('open');
     body.style.overflow = '';
   }
+
+
   if (mobileMenuBtn && mobileMenu && mobileOverlay) {
     mobileMenuBtn.addEventListener('click', openMobileMenu);
     mobileOverlay.addEventListener('click', closeMobileMenu);
@@ -172,7 +188,7 @@ function hideLoader() {
   const loader = document.getElementById('loader');
   if (loader) {
     loader.classList.add('hide');
-    setTimeout(() => loader.remove(), 900);
+    setTimeout(() => loader.remove(), 1900);
   }
 }
 
